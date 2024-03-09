@@ -21,7 +21,6 @@ public class MatchScoreServlet extends HttpServlet {
     private OngoingMatchesService ongoingMatchesService;
     private MatchScoreCalculationService matchScoreCalculationService;
     private FinishedMatchesPersistenceService finishedMatchesService;
-    private OngoingMatch ongoingMatch;
 
     @Override
     public void init(ServletConfig config) throws ServletException {
@@ -40,7 +39,7 @@ public class MatchScoreServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         UUID matchUuid = UUID.fromString(req.getParameter("uuid"));
-        ongoingMatch = ongoingMatchesService.getOngoingMatchByUuid(matchUuid);
+        OngoingMatch ongoingMatch = ongoingMatchesService.getOngoingMatchByUuid(matchUuid);
         req.setAttribute("match", ongoingMatch);
         if (ongoingMatch.getState() != State.ON_GOING) {
             ongoingMatch.setWinnerId();
@@ -59,6 +58,8 @@ public class MatchScoreServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         Long playerId = Long.parseLong(req.getParameter("playerId"));
+        UUID matchUuid = UUID.fromString(req.getParameter("uuid"));
+        OngoingMatch ongoingMatch = ongoingMatchesService.getOngoingMatchByUuid(matchUuid);
         matchScoreCalculationService.calculate(ongoingMatch, playerId);
         resp.sendRedirect(String.format("%s?uuid=%s", req.getContextPath() + "/match-score", ongoingMatch.getId()));
     }
