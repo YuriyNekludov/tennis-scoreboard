@@ -1,0 +1,223 @@
+header {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 1em;
+    text-align: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    background-color: #3498db;
+    padding: 1em;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 1em;
+    text-align: center;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px; /* Отступ между ссылками */
+    padding: 8px 15px;
+    border-radius: 5px;
+    background-color: #ff6347; /* Цвет кнопок */
+    transition: background-color 0.3s ease; /* Плавное изменение цвета при наведении */
+}
+
+.nav-link:hover {
+    background-color: #ff4500; /* Цвет кнопок при наведении */
+}
+
+.main-content {
+    display: flex;
+    align-items: center;
+}
+
+.main-a {
+    color: #3498db; /* Цвет ссылок */
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+    font-weight: bold; /* Жирный текст для ссылок */
+    margin-right: 2px; /* Небольшой отступ между ссылками */
+    transition: color 0.5s; /* Плавное изменение цвета в течение 0.3 секунды */
+}
+
+.main-a:hover {
+    color: #003366; /* Цвет при наведении */
+    text-decoration: underline; /* Добавляем подчеркивание при наведении */
+}
+
+.main-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 24.4vh; /* 100% высоты окна браузера */
+}
+
+.image-container {
+    text-align: center; /* Центрирование изображения по горизонтали */
+}
+
+img {
+    max-width: 100%; /* Максимальная ширина для изображения */
+    max-height: 41vh; /* Максимальная высота для изображения (70% высоты окна браузера) */
+}
+
+.text-container {
+    text-align: center;
+    margin-top: 10px; /* Расстояние сверху между изображением и текстом */
+}
+
+.text-size {
+    font-size: 17px;
+}
+
+/* new-match */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65.8vh; /* Высота экрана */
+}
+
+.form-wrapper {
+    width: 300px;
+    padding: 20px;
+    background-color: #3498db;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center; /* Центрируем текст внутри формы */
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Выравниваем по центру */
+}
+
+.form-input input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none; /* Убираем рамку у инпутов */
+    border-radius: 5px;
+}
+
+
+.submit-button {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    background-color: #ff6347; /* Цвет кнопок */
+    transition: background-color 0.3s ease; /* Плавное изменение цвета при наведении */
+}
+
+.new-match-text-container {
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Закругленные углы */
+    text-align: center;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.submit-button:hover {
+    background-color: #ff4500; /* Цвет кнопок при наведении */
+}
+
+/* match-score */
+.match-score-text-container {
+    border-radius: 5px; /* Закругленные углы */
+    text-align: center;
+    background-color: #ffffff;
+    margin-bottom: 6px;
+}
+
+.form-container-score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65.8vh;
+}
+
+.match-table {
+    width: 50%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    overflow-y: auto; /* Добавим прокрутку, если контент не помещается */
+}
+
+.match-table th, .match-table td {
+    padding: 5px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.match-table th {
+    background-color: #3498db;
+    color: white;
+}
+
+.match-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.matches-text-container {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    align-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.matches-text-container form {
+display: inline-block;
+}
+
+.matches-submit-button {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    background-color: #ff6347; /* Цвет кнопок */
+    transition: background-color 0.3s ease; /* Плавное изменение цвета при наведении */
+    margin: 0 5px;
+}
+
+.matches-submit-button:hover {
+    background-color: #ff4500; /* Цвет кнопок при наведении */
+}
+
+.matches-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60.3vh; /* Минимальная высота */
+}
+
+.search-form {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: -16px;
+}
+
+.search-form input {
+    padding: 8px;
+    margin-right: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
